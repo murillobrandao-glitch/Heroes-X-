@@ -5,7 +5,7 @@
     padding: 0;
 }
 
-/* CORPO DO SITE - Fundo escuro em tom azul-noite */
+/* CORPO DO SITE */
 body {
     background: #060b14;
     color: #ffffff;
@@ -13,7 +13,7 @@ body {
     text-align: center;
 }
 
-/* HEADER - Azul Sonic com borda amarela de Argola */
+/* HEADER */
 header {
     background: linear-gradient(180deg, #0052cc 0%, #002b80 100%);
     padding: 40px 20px;
@@ -21,7 +21,6 @@ header {
     box-shadow: 0px 5px 20px rgba(255, 215, 0, 0.3);
 }
 
-/* TÍTULO - Amarelo Ouro reluzente com sombra vermelha */
 header h1 {
     font-size: 2.8em;
     color: #ffd700;
@@ -57,15 +56,15 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* LAYOUT DE GRID PARA CARDS */
+/* LAYOUT DE GRID */
 .grid-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     justify-content: center;
 }
 
-/* CARDS DE JOGOS E PERSONAGENS - Borda Azul e Efeito Amarelo */
+/* CARDS */
 .card, .card-jogo {
     background: linear-gradient(145deg, #0e1a2b, #162840);
     border: 3px solid #0052cc;
@@ -73,16 +72,18 @@ h2 {
     padding: 20px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Efeito ao passar o mouse: Brilho de Argola de Ouro */
 .card:hover, .card-jogo:hover {
     transform: translateY(-8px) scale(1.02);
     border-color: #ffd700;
     box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
 }
 
-/* CONTAINER DE IMAGENS */
+/* CONTAINER DE IMAGENS HD */
 .container-img {
     width: 100%;
     height: 200px;
@@ -90,6 +91,7 @@ h2 {
     overflow: hidden;
     margin-bottom: 15px;
     border: 2px solid #00e5ff;
+    background-color: #000;
 }
 
 .container-img img, .card-jogo img {
@@ -97,16 +99,16 @@ h2 {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    image-rendering: -webkit-optimize-contrast;
 }
 
-/* TÍTULO DOS CARDS - Amarelo Sonic */
+/* TÍTULOS E TEXTOS */
 .card h3, .card-jogo h3 {
     color: #ffd700;
     font-size: 1.3em;
     margin-bottom: 10px;
 }
 
-/* TEXTOS DENTRO DOS CARDS */
 .data, .origem {
     color: #00e5ff;
     font-size: 0.9em;
@@ -117,9 +119,42 @@ h2 {
     color: #e0e6ed;
     font-size: 0.95em;
     line-height: 1.4;
+    margin-bottom: 15px;
 }
 
-/* LISTA DE CURIOSIDADES - Estilo Green Hill / Tails */
+/* BOTÕES DE LIKE E DISLIKE */
+.interacao {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-like, .btn-dislike {
+    background: #060b14;
+    border: 2px solid #00e5ff;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+}
+
+.btn-like:hover {
+    background: #00e640;
+    border-color: #00e640;
+    color: #000;
+}
+
+.btn-dislike:hover {
+    background: #e60000;
+    border-color: #e60000;
+    color: #fff;
+}
+
+/* LISTA DE CURIOSIDADES */
 ul {
     list-style: none;
     padding: 0;
@@ -131,7 +166,7 @@ li {
     background: linear-gradient(90deg, #10241b 0%, #162840 100%);
     margin: 15px 0;
     padding: 18px;
-    border-left: 6px solid #00e640; /* Verde Green Hill Zone */
+    border-left: 6px solid #00e640;
     border-right: 2px solid #ffd700;
     border-radius: 0 12px 12px 0;
     text-align: left;
@@ -141,6 +176,5 @@ li {
 }
 
 li strong {
-    color: #ffd700; /* Destaque em amarelo */
-    font-size: 1.05em;
+    color: #ffd700;
 }
